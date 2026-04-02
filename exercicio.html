@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Prática de Razonetes</title>
+  <style>
+    body { font-family: Arial; text-align: center; }
+    .container { display: flex; justify-content: space-around; margin-top: 20px; }
+    .razonete { border: 2px solid black; width: 250px; padding: 10px; }
+    table { width: 100%; }
+    td { border: 1px solid #000; height: 30px; }
+    input { width: 90%; border: none; text-align: center; }
+    button { margin-top: 20px; padding: 10px; }
+    .dados { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+    <a href="index.html">
+  <button>Voltar</button>
+</a>
+
+<h1>Exercício de Contabilidade</h1>
+
+<div class="dados">
+  <h3>Dados:</h3>
+  <p>Produtos em elaboração: 1720</p>
+  <p>Prêmios de debêntures a amortizar: 3440</p>
+  <p>Estoque de mercadorias: 2580</p>
+  <p>Dividendos a receber: 860</p>
+  <p>Imobilizado arrendado: 7740</p>
+  <p>Obrigações fiscais: 1800</p>
+  <p>Depreciação acumulada: 258</p>
+  <p>Empréstimos a pagar: 5160</p>
+</div>
+
+<p><b>Monte os razonetes e descubra o valor do PL</b></p>
+
+<div class="container">
+  <div class="razonete">
+    <h3>Ativo</h3>
+    <table id="ativo">
+      <tr><td><input type="number"></td><td><input type="number"></td></tr>
+      <tr><td><input type="number"></td><td><input type="number"></td></tr>
+      <tr><td><input type="number"></td><td><input type="number"></td></tr>
+    </table>
+  </div>
+
+  <div class="razonete">
+    <h3>Passivo</h3>
+    <table id="passivo">
+      <tr><td><input type="number"></td><td><input type="number"></td></tr>
+      <tr><td><input type="number"></td><td><input type="number"></td></tr>
+      <tr><td><input type="number"></td><td><input type="number"></td></tr>
+    </table>
+  </div>
+
+  <div class="razonete">
+    <h3>Patrimônio Líquido</h3>
+    <input type="number" id="valorPL" placeholder="Digite o PL">
+  </div>
+</div>
+
+<button onclick="verificar()">Verificar</button>
+
+<h2 id="resultado"></h2>
+
+<script>
+function somarTabela(id) {
+  let tabela = document.getElementById(id);
+  let inputs = tabela.getElementsByTagName('input');
+  let soma = 0;
+
+  for (let input of inputs) {
+    soma += Number(input.value) || 0;
+  }
+  return soma;
+}
+
+function verificar() {
+  let ativo = somarTabela('ativo');
+  let passivo = somarTabela('passivo');
+  let plDigitado = Number(document.getElementById('valorPL').value) || 0;
+
+  // Valores corretos do exercício
+  let ativoCorreto = 12642;
+  let passivoCorreto = 3520;
+  let plCorreto = 9122;
+
+  let resultado = document.getElementById('resultado');
+
+  if (ativo === ativoCorreto && passivo === passivoCorreto && plDigitado === plCorreto) {
+    resultado.innerText = "✅ Perfeito! Você acertou tudo!";
+    resultado.style.color = "green";
+  } else {
+    resultado.innerText = `❌ Erro!\nAtivo correto: ${ativoCorreto}, você: ${ativo}\nPassivo correto: ${passivoCorreto}, você: ${passivo}\nPL correto: ${plCorreto}, você: ${plDigitado}`;
+    resultado.style.color = "red";
+  }
+}
+</script>
+
+</body>
+</html>

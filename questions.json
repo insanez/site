@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Caixa",
+    "tipo": "Ativo",
+    "natureza": "Devedor",
+    "exp": "Disponibilidade.",
+    "ex": "Recebimento em dinheiro."
+  },
+  {
+    "name": "Banco conta movimento",
+    "tipo": "Ativo",
+    "natureza": "Devedor",
+    "exp": "Disponível em banco.",
+    "ex": "Depósito bancário."
+  },
+  {
+    "name": "Clientes",
+    "tipo": "Ativo",
+    "natureza": "Devedor",
+    "exp": "Direito a receber.",
+    "ex": "Venda a prazo."
+  },
+  {
+    "name": "Estoques",
+    "tipo": "Ativo",
+    "natureza": "Devedor",
+    "exp": "Bens para venda.",
+    "ex": "Mercadorias armazenadas."
+  },
+  {
+    "name": "Imobilizado",
+    "tipo": "Ativo",
+    "natureza": "Devedor",
+    "exp": "Bens de uso.",
+    "ex": "Compra de máquina."
+  },
+  {
+    "name": "Intangível",
+    "tipo": "Ativo",
+    "natureza": "Devedor",
+    "exp": "Sem forma física.",
+    "ex": "Software."
+  },
+  {
+    "name": "Depreciação acumulada",
+    "tipo": "Ativo Redutora",
+    "natureza": "Credor",
+    "exp": "Reduz ativo.",
+    "ex": "Desgaste de máquina."
+  },
+  {
+    "name": "Amortização acumulada",
+    "tipo": "Ativo Redutora",
+    "natureza": "Credor",
+    "exp": "Reduz intangível.",
+    "ex": "Software perdendo valor."
+  },
+  {
+    "name": "Fornecedores",
+    "tipo": "Passivo",
+    "natureza": "Credor",
+    "exp": "Obrigação.",
+    "ex": "Compra a prazo."
+  },
+  {
+    "name": "Salários a pagar",
+    "tipo": "Passivo",
+    "natureza": "Credor",
+    "exp": "Dívida com empregados.",
+    "ex": "Folha pendente."
+  },
+  {
+    "name": "Empréstimos a pagar",
+    "tipo": "Passivo",
+    "natureza": "Credor",
+    "exp": "Dívida bancária.",
+    "ex": "Financiamento."
+  },
+  {
+    "name": "Duplicatas descontadas",
+    "tipo": "Passivo",
+    "natureza": "Credor",
+    "exp": "Obrigação financeira.",
+    "ex": "Antecipação de recebíveis."
+  },
+  {
+    "name": "Capital social",
+    "tipo": "PL",
+    "natureza": "Credor",
+    "exp": "Investimento dos sócios.",
+    "ex": "Integralização."
+  },
+  {
+    "name": "Reservas de lucro",
+    "tipo": "PL",
+    "natureza": "Credor",
+    "exp": "Lucros retidos.",
+    "ex": "Reserva legal."
+  },
+  {
+    "name": "Ações em tesouraria",
+    "tipo": "PL",
+    "natureza": "Devedor",
+    "exp": "Redutora do PL.",
+    "ex": "Recompra de ações."
+  },
+  {
+    "name": "Receita de vendas",
+    "tipo": "PL",
+    "natureza": "Credor",
+    "exp": "Aumenta PL.",
+    "ex": "Venda."
+  },
+  {
+    "name": "Despesa administrativa",
+    "tipo": "PL",
+    "natureza": "Devedor",
+    "exp": "Reduz PL.",
+    "ex": "Salários."
+  },
+  {
+    "name": "Despesa comercial",
+    "tipo": "PL",
+    "natureza": "Devedor",
+    "exp": "Reduz PL.",
+    "ex": "Comissão."
+  },
+  {
+    "name": "Despesa com depreciação",
+    "tipo": "PL",
+    "natureza": "Devedor",
+    "exp": "Reduz PL.",
+    "ex": "Depreciação mensal."
+  },
+  {
+    "name": "Perdas estimadas",
+    "tipo": "Ativo Redutora",
+    "natureza": "Credor",
+    "exp": "Reduz clientes.",
+    "ex": "Inadimplência."
+  }
+]

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Treino CEBRASPE</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<a href="exercicio.html">
+  <button>Ir para Razonetes</button>
+</a>
+<div class="container">
+
+  <!-- QUIZ -->
+  <div class="card">
+    <h2>Classifique a conta:</h2>
+    <p id="question" class="question"></p>
+
+    <button onclick="toggleExample()">Ver exemplo</button>
+    <div id="example" class="example" style="display:none;"></div>
+
+    <h3>Tipo</h3>
+    <div id="tipos"></div>
+
+    <h3>Natureza</h3>
+    <div id="naturezas"></div>
+
+    <div class="actions">
+      <button onclick="checkAnswer()">Verificar</button>
+      <button onclick="nextQuestion()">Próxima</button>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <!-- ESTATÍSTICAS -->
+  <div class="card stats">
+    <h2>Desempenho</h2>
+
+    <p id="statTotal"></p>
+    <p id="statAcertos" class="green"></p>
+    <p id="statErros" class="red"></p>
+    <p id="statPendentes" class="yellow"></p>
+
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+
+    <button onclick="reviewErrors()">Revisar erros</button>
+    <button onclick="resetAll()">Resetar</button>
+  </div>
+
+</div>
+
+</body>
+</html>
