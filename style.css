@@ -8,7 +8,44 @@ body {
   justify-content: center;   /* centraliza horizontal */
   align-items: center;       /* centraliza vertical */
 }
+.menu {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #222;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
 
+    .menu a button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .menu a button:hover {
+      background: #45a049;
+    }
+
+    /* ESPAÇO PARA NÃO FICAR ESCONDIDO ATRÁS DO MENU */
+    .conteudo {
+      margin-top: 70px;
+    }
+
+    .container { display: flex; justify-content: space-around; margin-top: 20px; }
+    .razonete { border: 2px solid black; width: 250px; padding: 10px; }
+    table { width: 100%; }
+    td { border: 1px solid #000; height: 30px; }
+    input { width: 90%; border: none; text-align: center; }
+    button { margin-top: 20px; padding: 10px; }
+    .dados { margin-top: 20px; }
+    
 .container {
   display: flex;
   gap: 20px;
