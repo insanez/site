@@ -29,12 +29,12 @@ function render(){
   document.getElementById("question").innerText = q.name;
   document.getElementById("example").innerText = q.ex;
 
-  const tipos = ["Ativo","Passivo","PL","Ativo Redutora"];
+  const tipos = ["Ativo","Passivo","Patrimônio Líquido","Ativo (Retificadora)","Patrimônio Líquido (Retificadora)","Resultado (Despesa)","Resultado (Receita)"];
   document.getElementById("tipos").innerHTML = tipos.map(t =>
     `<button class="${tipo===t?'selected':''}" onclick="selectTipo('${t}')">${t}</button>`
   ).join("");
 
-  const nat = ["Devedor","Credor"];
+  const nat = ["Devedora","Credora"];
   document.getElementById("naturezas").innerHTML = nat.map(n =>
     `<button class="${natureza===n?'selected':''}" onclick="selectNatureza('${n}')">${n}</button>`
   ).join("");

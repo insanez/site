@@ -9,7 +9,7 @@
   },
   {
     "name": "Caixa",
-    "tipo": "Ativo Circulante",
+    "tipo": "Ativo",
     "natureza": "Devedora",
     "exp": "Disponibilidade imediata em dinheiro ou depósitos bancários.",
     "ex": "Dinheiro em espécie guardado no cofre da empresa."
@@ -23,63 +23,63 @@
   },
   {
     "name": "Clientes",
-    "tipo": "Ativo Circulante",
+    "tipo": "Ativo ",
     "natureza": "Devedora",
     "exp": "Direitos de recebimento por vendas de mercadorias ou serviços a prazo.",
     "ex": "Venda realizada com emissão de nota fiscal para pagamento em 30 dias."
   },
   {
     "name": "Contas a Pagar em 3 anos",
-    "tipo": "Passivo Não Circulante",
+    "tipo": "Passivo",
     "natureza": "Credora",
     "exp": "Obrigações com terceiros com vencimento após o exercício seguinte.",
     "ex": "Financiamento de longo prazo para expansão da fábrica."
   },
   {
     "name": "Contas a Receber em 1.000 dias",
-    "tipo": "Ativo Não Circulante (Realizável a LP)",
+    "tipo": "Ativo",
     "natureza": "Devedora",
     "exp": "Direitos a receber que excedem o prazo do ciclo operacional normal.",
     "ex": "Empréstimo concedido a uma empresa coligada com prazo longo."
   },
   {
     "name": "Depreciação Acumulada",
-    "tipo": "Ativo Não Circulante (Retificadora)",
+    "tipo": "Ativo (Retificadora)",
     "natureza": "Credora",
     "exp": "Desgaste ou perda de valor de bens do imobilizado pelo uso ou tempo.",
     "ex": "Redução do valor contábil de um veículo após um ano de uso."
   },
   {
     "name": "Estoques",
-    "tipo": "Ativo Circulante",
+    "tipo": "Ativo",
     "natureza": "Devedora",
     "exp": "Bens destinados à venda ou produção de novos produtos.",
     "ex": "Mercadorias prontas na prateleira aguardando comprador."
   },
   {
     "name": "Fornecedores",
-    "tipo": "Passivo Circulante",
+    "tipo": "Passivo",
     "natureza": "Credora",
     "exp": "Dívidas com vendedores de matéria-prima ou mercadorias.",
     "ex": "Compra de insumos a prazo para pagamento no mês seguinte."
   },
   {
     "name": "Impostos a Recolher",
-    "tipo": "Passivo Circulante",
+    "tipo": "Passivo",
     "natureza": "Credora",
     "exp": "Tributos retidos ou apurados que devem ser pagos ao governo.",
     "ex": "Valor do ICMS ou ISS apurado sobre as vendas do mês."
   },
   {
     "name": "Máquinas",
-    "tipo": "Ativo Não Circulante (Imobilizado)",
+    "tipo": "Ativo",
     "natureza": "Devedora",
     "exp": "Bens tangíveis utilizados na manutenção das atividades da empresa.",
     "ex": "Torno mecânico utilizado na linha de produção."
   },
   {
     "name": "Provisões Cíveis",
-    "tipo": "Passivo (Circulante ou Não Circulante)",
+    "tipo": "Passivo",
     "natureza": "Credora",
     "exp": "Estimativas de gastos futuros com processos judiciais prováveis.",
     "ex": "Reserva de valor para possível perda em processo de indenização."
@@ -93,9 +93,107 @@
   },
   {
     "name": "Terrenos",
-    "tipo": "Ativo Não Circulante (Imobilizado)",
+    "tipo": "Ativo",
     "natureza": "Devedora",
     "exp": "Propriedades de terra onde a empresa está instalada ou planeja construir.",
     "ex": "Lote onde foi construído o galpão logístico da companhia."
+  },
+  {
+    "name": "Caixa e Equivalentes",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Recursos com liquidez imediata.",
+    "ex": "Saldo em conta corrente bancária."
+  },
+  {
+    "name": "Seguros Antecipados",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Despesas pagas que serão apropriadas ao longo do tempo.",
+    "ex": "Pagamento anual de seguro de veículos feito à vista."
+  },
+  {
+    "name": "Material de Consumo",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Materiais estocados para uso nas atividades administrativas.",
+    "ex": "Reserva de papel sulfite e cartuchos de impressora."
+  },
+  {
+    "name": "Terrenos",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Propriedades de terra de uso da empresa.",
+    "ex": "Lote onde está construída a sede da companhia."
+  },
+  {
+    "name": "Edifícios",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Construções e benfeitorias em propriedades.",
+    "ex": "Prédio administrativo ou galpão de estoque."
+  },
+  {
+    "name": "Equipamentos",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Máquinas e aparelhos utilizados na operação.",
+    "ex": "Computadores, impressoras ou maquinário industrial."
+  },
+  {
+    "name": "Fornecedores",
+    "tipo": "Passivo",
+    "natureza": "Credora",
+    "exp": "Obrigações por compras de mercadorias ou insumos a prazo.",
+    "ex": "Dívida com o vendedor de matéria-prima."
+  },
+  {
+    "name": "Receita Antecipada",
+    "tipo": "Passivo",
+    "natureza": "Credora",
+    "exp": "Valores recebidos por serviços ainda não prestados.",
+    "ex": "Adiantamento de cliente por um projeto que será iniciado no mês seguinte."
+  },
+  {
+    "name": "Empréstimos",
+    "tipo": "Passivo",
+    "natureza": "Credora",
+    "exp": "Captação de recursos junto a instituições financeiras.",
+    "ex": "Empréstimo bancário para capital de giro."
+  },
+  {
+    "name": "Capital Social",
+    "tipo": "Patrimônio Líquido",
+    "natureza": "Credora",
+    "exp": "Recursos investidos pelos sócios na entidade.",
+    "ex": "Aporte financeiro inicial para abertura da empresa."
+  },
+  {
+    "name": "Receita de Serviço",
+    "tipo": "Resultado (Receita)",
+    "natureza": "Credora",
+    "exp": "Faturamento gerado pela prestação de serviços.",
+    "ex": "Valor cobrado por uma consultoria realizada."
+  },
+  {
+    "name": "Despesa de Salários",
+    "tipo": "Resultado (Despesa)",
+    "natureza": "Devedora",
+    "exp": "Custo com a remuneração de funcionários no período.",
+    "ex": "Pagamento dos ordenados do mês de agosto."
+  },
+  {
+    "name": "Despesa de Utilidades",
+    "tipo": "Resultado (Despesa)",
+    "natureza": "Devedora",
+    "exp": "Gastos com serviços públicos essenciais.",
+    "ex": "Contas de energia elétrica, água e internet."
+  },
+  {
+    "name": "Despesa de Propaganda",
+    "tipo": "Resultado (Despesa)",
+    "natureza": "Devedora",
+    "exp": "Gastos com marketing e publicidade da marca ou produtos.",
+    "ex": "Pagamento de anúncio em redes sociais ou rádio."
   }
 ]
