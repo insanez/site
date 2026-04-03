@@ -29,7 +29,7 @@
     "ex": "Venda realizada com emissão de nota fiscal para pagamento em 30 dias."
   },
   {
-    "name": "Contas a Pagar em 3 anos",
+    "name": "Contas a Pagar em 3 anos.",
     "tipo": "Passivo",
     "natureza": "Credora",
     "exp": "Obrigações com terceiros com vencimento após o exercício seguinte.",
