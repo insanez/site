@@ -11,19 +11,19 @@
     padding: 0;
 }
 
-/* 1. SOLUÇÃO DEFINITIVA: BODY COMO FLEX CONTAINER */
+/* 1. ESTRUTURA DO BODY */
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--bg-body);
     color: var(--text-main);
     
     display: flex;
-    flex-direction: column; /* Empilha Menu e Conteúdo verticalmente */
-    height: 100vh;         /* Força o body a ter a altura da tela inteira */
-    overflow: hidden;      /* Impede que o corpo todo role (opcional) */
+    flex-direction: column; 
+    height: 100vh;         
+    overflow: hidden;      /* Mantém a janela principal fixa */
 }
 
-/* 2. MENU RELATIVO (ELE OCUPA O ESPAÇO DELE) */
+/* 2. MENU (ESPAÇO FIXO NO TOPO) */
 .menu {
     width: 100%;
     background: #1e293b;
@@ -32,7 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex-shrink: 0; /* Impede o menu de "encolher" */
+    flex-shrink: 0; 
 }
 
 .menu a button {
@@ -45,17 +45,19 @@ body {
     font-weight: bold;
 }
 
-/* 3. CONTEÚDO OCUPA O ESPAÇO RESTANTE */
+/* 3. CONTEÚDO (AJUSTADO PARA NÃO SUMIR NA BARRA DE TAREFAS) */
 .conteudo {
-    flex-grow: 1;         /* Manda o conteúdo ocupar 100% do que sobrou abaixo do menu */
+    flex-grow: 1;         
     display: flex;
     justify-content: center;
-    align-items: center;  /* Centraliza os boxes verticalmente no espaço que sobrou */
-    overflow-y: auto;     /* Se o conteúdo for maior que a tela, ele rola aqui dentro */
-    padding: 20px;
+    /* Alinha no topo para que o scroll funcione corretamente de cima para baixo */
+    align-items: flex-start;  
+    overflow-y: auto;     
+    /* Padding-top para respiro e padding-bottom para não colar na barra de tarefas */
+    padding: 30px 20px 80px 20px; 
 }
 
-/* 4. OS DOIS BOXES CENTRALIZADOS */
+/* 4. OS DOIS BOXES */
 .container {
     display: flex;
     flex-direction: row;
@@ -63,6 +65,8 @@ body {
     width: 95%;
     max-width: 1000px;
     justify-content: center;
+    /* Garante que o container não fique "achatado" */
+    min-height: min-content; 
 }
 
 .card, .dados {
@@ -70,8 +74,9 @@ body {
     padding: 25px;
     border-radius: 15px;
     box-shadow: var(--shadow);
-    flex: 1; /* Mantém os dois com o mesmo tamanho */
+    flex: 1; 
     min-width: 280px;
+    height: fit-content; /* O box cresce conforme o texto da resposta */
 }
 
 /* Ajustes visuais finos */
@@ -92,6 +97,7 @@ button {
     cursor: pointer;
     background: #f8fafc;
     font-size: 14px;
+    transition: all 0.2s;
 }
 
 button:hover {
@@ -104,6 +110,47 @@ button:hover {
     color: white;
 }
 
+/* BOTÃO VERIFICAR */
+#btn-verificar {
+    background-color: #22c55e;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 4px 0 #16a34a;
+}
+
+#btn-verificar:hover {
+    background-color: #16a34a;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #16a34a;
+}
+
+/* BOTÃO PRÓXIMA */
+#btn-proxima {
+    background-color: #f59e0b;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 10px;
+    text-align: center;
+    box-shadow: 0 4px 0 #d97706;
+}
+
+#btn-proxima:hover {
+    background-color: #d97706;
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #d97706;
+}
+
+button:disabled {
+    background-color: #cbd5e1 !important;
+    box-shadow: none !important;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
 .progress-bar {
     width: 100%;
     height: 10px;
@@ -114,8 +161,9 @@ button:hover {
 
 #progress {
     height: 100%;
-    background: var(--primary);
+    background: #22c55e; /* Mudei para verde para combinar com acertos */
     width: 0%;
+    transition: width 0.3s ease;
 }
 
 /* 5. RESPONSIVIDADE */
@@ -123,5 +171,8 @@ button:hover {
     .container {
         flex-direction: column;
         align-items: center;
+    }
+    .conteudo {
+        padding-bottom: 40px;
     }
 }

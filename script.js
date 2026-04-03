@@ -95,6 +95,8 @@ function reviewErrors(){
   render();
 }
 
+document.getElementById('btn-proxima').style.display = 'block';
+
 function resetAll(){
   questions = shuffle(questions);
   wrong = [];
