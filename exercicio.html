@@ -5,6 +5,7 @@
   <title>Prática de Razonetes</title>
   <!-- Importe seu style.css aqui -->
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -13,21 +14,17 @@
 </div>
 
 <div class="conteudo">
-    <div class="container" style="max-width: 1100px;"> <!-- Um pouco mais largo para caber os 3 boxes -->
+    <div class="container" style="max-width: 1100px;">
         
         <!-- BOX DE DADOS (ESQUERDA) -->
         <div class="dados">
-            <h3>📝 Dados do Exercício</h3>
-            <p>Produtos em elaboração: 1720</p>
-            <p>Prêmios de debêntures a amortizar: 3440</p>
-            <p>Estoque de mercadorias: 2580</p>
-            <p>Dividendos a receber: 860</p>
-            <p>Imobilizado arrendado: 7740</p>
-            <p>Obrigações fiscais: 1800</p>
-            <p>Depreciação acumulada: 258</p>
-            <p>Empréstimos a pagar: 5160</p>
+            <h3 id="titulo-exercicio">📝 Carregando Exercício...</h3>
+            <div id="lista-dados">
+                <!-- Os <p> serão inseridos aqui pelo JS -->
+            </div>
             <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
             <p><b>Objetivo:</b> Monte os razonetes e descubra o valor do PL.</p>
+            <button id="btn-proxima" onclick="proximoExercicio()" style="display:none; margin-top:10px;">Próximo Exercício</button>
         </div>
 
         <!-- BOX DE LANÇAMENTOS (DIREITA) -->
@@ -36,18 +33,20 @@
                 <div class="razonete">
                     <h3>Ativo</h3>
                     <table id="ativo">
-                        <tr><td><input type="number"></td><td><input type="number"></td></tr>
-                        <tr><td><input type="number"></td><td><input type="number"></td></tr>
-                        <tr><td><input type="number"></td><td><input type="number"></td></tr>
+                        <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
+                        <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
+                        <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
+                        <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
                     </table>
                 </div>
 
                 <div class="razonete">
                     <h3>Passivo</h3>
                     <table id="passivo">
-                        <tr><td><input type="number"></td><td><input type="number"></td></tr>
-                        <tr><td><input type="number"></td><td><input type="number"></td></tr>
-                        <tr><td><input type="number"></td><td><input type="number"></td></tr>
+                        <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
+                        <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
+                        <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
+                        <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
                     </table>
                 </div>
             </div>
@@ -60,7 +59,6 @@
             <button id="btn-verificar" onclick="verificar()">Verificar Balanço</button>
             <h2 id="resultado" style="font-size: 16px; margin-top: 15px; white-space: pre-line;"></h2>
         </div>
-
     </div>
 </div>
 

@@ -109,3 +109,71 @@ function resetAll(){
 }
 
 loadQuestions();
+
+let listaExercicios = [];
+let exercicioAtual = 0;
+
+async function carregarExercicios() {
+    try {
+        const response = await fetch('razonetes.json');
+        listaExercicios = await response.json();
+        exibirExercicio();
+    } catch (error) {
+        console.error("Erro ao carregar questões:", error);
+    }
+}
+
+function exibirExercicio() {
+    const ex = listaExercicios[exercicioAtual];
+    document.getElementById('titulo-exercicio').innerText = `📝 ${ex.titulo}`;
+    
+    const listaContainer = document.getElementById('lista-dados');
+    listaContainer.innerHTML = ex.dados.map(d => `<p>${d.nome}: <b>${d.valor}</b></p>`).join('');
+    
+    // Limpa campos anteriores
+    limparCampos();
+}
+
+function limparCampos() {
+    document.querySelectorAll('input').forEach(input => input.value = '');
+    document.getElementById('resultado').innerText = '';
+    document.getElementById('btn-proxima').style.display = 'none';
+}
+
+function somarInputs(seletor) {
+    let soma = 0;
+    document.querySelectorAll(seletor).forEach(input => {
+        soma += Number(input.value) || 0;
+    });
+    return soma;
+}
+
+function verificar() {
+    const ex = listaExercicios[exercicioAtual];
+    const somaAtivo = somarInputs('.ativo-input');
+    const somaPassivo = somarInputs('.passivo-input');
+    const plDigitado = Number(document.getElementById('valorPL').value) || 0;
+
+    const resElement = document.getElementById('resultado');
+
+    const acertou = (somaAtivo === ex.correto.ativo && 
+                     somaPassivo === ex.correto.passivo && 
+                     plDigitado === ex.correto.pl);
+
+    if (acertou) {
+        resElement.innerText = "✅ Perfeito! O Balanço Patrimonial está correto.";
+        resElement.className = "green";
+        document.getElementById('btn-proxima').style.display = 'block';
+    } else {
+        resElement.innerText = `❌ Há erros no lançamento.\nDica: Ativo deve ser ${ex.correto.ativo}.`;
+        resElement.className = "red";
+    }
+}
+
+function proximoExercicio() {
+    exercicioAtual = (exercicioAtual + 1) % listaExercicios.length;
+    exibirExercicio();
+}
+
+// Inicia o carregamento ao abrir a página
+carregarExercicios();

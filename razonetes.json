@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "titulo": "Exercício Inicial: Equilíbrio Patrimonial",
+    "dados": [
+      {"nome": "Caixa", "valor": 5000},
+      {"nome": "Estoques", "valor": 3000},
+      {"nome": "Máquinas", "valor": 12000},
+      {"nome": "Fornecedores", "valor": 4000},
+      {"nome": "Empréstimos", "valor": 6000}
+    ],
+    "correto": {
+      "ativo": 20000,
+      "passivo": 10000,
+      "pl": 10000
+    }
+  },
+  {
+    "id": 2,
+    "titulo": "Exercício: Estrutura Básica",
+    "dados": [
+      {"nome": "Clientes", "valor": 2500},
+      {"nome": "Edifícios", "valor": 15000},
+      {"nome": "Impostos a Recolher", "valor": 1500},
+      {"nome": "Contas a Pagar (longo prazo)", "valor": 3000},
+      {"nome": "Material de Consumo", "valor": 500}
+    ],
+    "correto": {
+      "ativo": 18000,
+      "passivo": 4500,
+      "pl": 13500
+    }
+  }
+]
