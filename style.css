@@ -16,14 +16,13 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--bg-body);
     color: var(--text-main);
-    
     display: flex;
-    flex-direction: column; 
-    height: 100vh;         
-    overflow: hidden;      /* Mantém a janela principal fixa */
+    flex-direction: column;
+    height: 100vh; /* Ocupa 100% da altura da janela */
+    overflow: hidden; /* Evita que a barra de rolagem principal quebre o layout */
 }
 
-/* 2. MENU (ESPAÇO FIXO NO TOPO) */
+/* 2. MENU NO TOPO */
 .menu {
     width: 100%;
     background: #1e293b;
@@ -32,7 +31,7 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex-shrink: 0; 
+    flex-shrink: 0; /* Impede o menu de encolher */
 }
 
 .menu a button {
@@ -45,58 +44,57 @@ body {
     font-weight: bold;
 }
 
-/* 3. CONTEÚDO (AJUSTADO PARA NÃO SUMIR NA BARRA DE TAREFAS) */
+/* 3. ÁREA DE CONTEÚDO CENTRALIZADA */
 .conteudo {
-    flex-grow: 1;         
+    flex-grow: 1;
     display: flex;
-    justify-content: center;
-    /* Alinha no topo para que o scroll funcione corretamente de cima para baixo */
-    align-items: flex-start;  
-    overflow-y: auto;     
-    /* Padding-top para respiro e padding-bottom para não colar na barra de tarefas */
-    padding: 30px 20px 80px 20px; 
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    overflow-y: auto;        /* Se o conteúdo crescer demais, o scroll aparece aqui */
+    padding: 20px;
 }
 
-/* 4. OS DOIS BOXES */
+/* 4. CONTAINER DAS BOXES */
 .container {
     display: flex;
     flex-direction: row;
     gap: 20px;
     width: 95%;
-    max-width: 1000px;
+    max-width: 850px; /* Mantém o tamanho compacto que você pediu */
     justify-content: center;
-    /* Garante que o container não fique "achatado" */
-    min-height: min-content; 
+    align-items: stretch; /* Deixa as duas com a mesma altura */
+    margin: auto; /* Força a centralização dentro do flex-grow */
 }
 
+/* 5. BOXES (QUESTÕES E ESTATÍSTICAS) */
 .card, .dados {
     background: white;
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: var(--shadow);
     flex: 1; 
-    min-width: 280px;
-    height: fit-content; /* O box cresce conforme o texto da resposta */
+    min-width: 280px; /* Garante que não fiquem finas demais antes de quebrar */
+    height: fit-content;
 }
 
-/* Ajustes visuais finos */
+/* Ajustes de tipografia e botões */
 .question {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     color: var(--primary);
 }
 
 button {
     display: block;
     width: 100%;
-    margin: 8px 0;
-    padding: 12px;
+    margin: 6px 0;
+    padding: 10px;
     border: 1px solid #e2e8f0;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     background: #f8fafc;
-    font-size: 14px;
+    font-size: 13px;
     transition: all 0.2s;
 }
 
@@ -110,69 +108,70 @@ button:hover {
     color: white;
 }
 
-/* BOTÃO VERIFICAR */
+/* 6. BOTÕES DE AÇÃO ESPECÍFICOS */
 #btn-verificar {
     background-color: #22c55e;
     color: white;
     font-weight: bold;
     border: none;
-    margin-top: 20px;
+    margin-top: 15px;
+    padding: 12px;
     text-align: center;
-    box-shadow: 0 4px 0 #16a34a;
+    box-shadow: 0 3px 0 #16a34a;
 }
 
 #btn-verificar:hover {
     background-color: #16a34a;
     transform: translateY(2px);
-    box-shadow: 0 2px 0 #16a34a;
+    box-shadow: 0 1px 0 #16a34a;
 }
 
-/* BOTÃO PRÓXIMA */
 #btn-proxima {
     background-color: #f59e0b;
     color: white;
     font-weight: bold;
     border: none;
-    margin-top: 10px;
+    margin-top: 8px;
+    padding: 12px;
     text-align: center;
-    box-shadow: 0 4px 0 #d97706;
+    box-shadow: 0 3px 0 #d97706;
 }
 
 #btn-proxima:hover {
     background-color: #d97706;
     transform: translateY(2px);
-    box-shadow: 0 2px 0 #d97706;
+    box-shadow: 0 1px 0 #d97706;
 }
 
-button:disabled {
-    background-color: #cbd5e1 !important;
-    box-shadow: none !important;
-    cursor: not-allowed;
-    transform: none !important;
-}
-
+/* 7. BARRA DE PROGRESSO */
 .progress-bar {
     width: 100%;
-    height: 10px;
+    height: 8px;
     background: #e2e8f0;
     border-radius: 10px;
-    margin: 15px 0;
+    margin: 12px 0;
 }
 
 #progress {
     height: 100%;
-    background: #22c55e; /* Mudei para verde para combinar com acertos */
+    background: #22c55e;
     width: 0%;
     transition: width 0.3s ease;
 }
 
-/* 5. RESPONSIVIDADE */
-@media (max-width: 800px) {
+/* 8. RESPONSIVIDADE (MOBILE) */
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     .conteudo {
-        padding-bottom: 40px;
+        align-items: flex-start; /* No celular, alinha no topo para permitir scroll */
+        padding-top: 20px;
+    }
+    .card, .dados {
+        width: 100%;
+        min-width: unset;
     }
 }
