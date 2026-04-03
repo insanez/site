@@ -30,5 +30,87 @@
       "passivo": 4500,
       "pl": 13500
     }
+  },
+  {
+    "id": 3,
+    "titulo": "Exercício: Disponibilidades e Obrigações",
+    "dados": [
+      {"nome": "Caixa e Equivalentes", "valor": 8000},
+      {"nome": "Seguros Antecipados", "valor": 1200},
+      {"nome": "Receita Antecipada", "valor": 2000},
+      {"nome": "Fornecedores", "valor": 3500},
+      {"nome": "Ações em Tesouraria", "valor": 1500}
+    ],
+    "correto": {
+      "ativo": 9200,
+      "passivo": 5500,
+      "pl": 3700
+    },
+    "obs": "Lembre-se: Ações em Tesouraria reduzem o PL."
+  },
+  {
+    "id": 4,
+    "titulo": "Exercício: Imobilizado e Depreciação",
+    "dados": [
+      {"nome": "Terrenos", "valor": 20000},
+      {"nome": "Edifícios", "valor": 50000},
+      {"nome": "Depreciação Acumulada", "valor": 5000},
+      {"nome": "Empréstimos", "valor": 15000},
+      {"nome": "Capital Social", "valor": 45000}
+    ],
+    "correto": {
+      "ativo": 65000,
+      "passivo": 15000,
+      "pl": 50000
+    },
+    "obs": "A Depreciação Acumulada é uma conta retificadora do Ativo (diminui o valor total)."
+  },
+  {
+    "id": 5,
+    "titulo": "Exercício: Longo Prazo",
+    "dados": [
+      {"nome": "Contas a Receber (1.000 dias)", "valor": 7000},
+      {"nome": "Equipamentos", "valor": 4000},
+      {"nome": "Contas a Pagar (3 anos)", "valor": 5000},
+      {"nome": "Impostos a Recolher", "valor": 800},
+      {"nome": "Reserva Legal", "valor": 1200}
+    ],
+    "correto": {
+      "ativo": 11000,
+      "passivo": 5800,
+      "pl": 5200
+    }
+  },
+  {
+    "id": 6,
+    "titulo": "Exercício: Materiais e Operações",
+    "dados": [
+      {"nome": "Material de Consumo", "valor": 600},
+      {"nome": "Estoques", "valor": 4400},
+      {"nome": "Clientes", "valor": 3000},
+      {"nome": "Fornecedores", "valor": 2200},
+      {"nome": "Capital Social", "valor": 5000}
+    ],
+    "correto": {
+      "ativo": 8000,
+      "passivo": 2200,
+      "pl": 5800
+    }
+  },
+  {
+    "id": 7,
+    "titulo": "Exercício: Revisão Geral",
+    "dados": [
+      {"nome": "Máquinas", "valor": 12000},
+      {"nome": "Caixa", "valor": 3000},
+      {"nome": "Provisões Cíveis", "valor": 2500},
+      {"nome": "Empréstimos", "valor": 4500},
+      {"nome": "Reserva Legal", "valor": 1000}
+    ],
+    "correto": {
+      "ativo": 15000,
+      "passivo": 7000,
+      "pl": 8000
+    }
   }
 ]

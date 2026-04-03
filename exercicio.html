@@ -14,7 +14,7 @@
 </div>
 
 <div class="conteudo">
-    <div class="container" style="max-width: 1100px;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto;">
         
         <!-- BOX DE DADOS (ESQUERDA) -->
         <div class="dados">
@@ -30,23 +30,41 @@
         <!-- BOX DE LANÇAMENTOS (DIREITA) -->
         <div class="card">
             <div class="grid-razonetes">
+                <!-- RAZONETE ATIVO -->
                 <div class="razonete">
                     <h3>Ativo</h3>
                     <table id="ativo">
-                        <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
-                        <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
-                        <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
-                        <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
+                        <thead>
+                            <tr>
+                                <th class="label-contabil">Débito (D)</th>
+                                <th class="label-contabil">Crédito (C)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
+                            <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
+                            <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
+                            <tr><td><input type="number" class="ativo-input"></td><td><input type="number" class="ativo-input"></td></tr>
+                        </tbody>
                     </table>
                 </div>
 
+                <!-- RAZONETE PASSIVO -->
                 <div class="razonete">
                     <h3>Passivo</h3>
                     <table id="passivo">
-                        <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
-                        <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
-                        <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
-                        <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
+                        <thead>
+                            <tr>
+                                <th class="label-contabil">Débito (D)</th>
+                                <th class="label-contabil">Crédito (C)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
+                            <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
+                            <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
+                            <tr><td><input type="number" class="passivo-input"></td><td><input type="number" class="passivo-input"></td></tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
