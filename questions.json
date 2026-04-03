@@ -23,7 +23,7 @@
   },
   {
     "name": "Clientes",
-    "tipo": "Ativo ",
+    "tipo": "Ativo",
     "natureza": "Devedora",
     "exp": "Direitos de recebimento por vendas de mercadorias ou serviços a prazo.",
     "ex": "Venda realizada com emissão de nota fiscal para pagamento em 30 dias."
