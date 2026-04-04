@@ -109,8 +109,8 @@
     "name": "Seguros Antecipados",
     "tipo": "Ativo",
     "natureza": "Devedora",
-    "exp": "Despesas pagas que serão apropriadas ao longo do tempo.",
-    "ex": "Pagamento anual de seguro de veículos feito à vista."
+    "exp": "Por que é um Ativo? Embora o dinheiro já tenha saído do caixa, o benefício do seguro (a cobertura) ainda não foi 'consumido'. Portanto, ele representa um direito da empresa: o direito de ter cobertura segurária pelos meses seguintes.",
+    "ex": "Despesas pagas que serão apropriadas ao longo do tempo."
   },
   {
     "name": "Material de Consumo",
