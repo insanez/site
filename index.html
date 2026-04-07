@@ -32,29 +32,29 @@
 
 <div class="actions">
   <button id="btn-verificar" onclick="checkAnswer()">Verificar</button>
-  <button id="btn-proxima" onclick="nextQuestion()">Próxima</button>
+  <button id="btn-proxima-quiz" onclick="nextQuestion()">Próxima</button>
 </div>
 
     <div id="result"></div>
   </div>
 
-  <!-- ESTATÍSTICAS -->
-  <div class="card stats">
-    <h2>Desempenho</h2>
+<div class="card stats">
 
-    <p id="statTotal"></p>
-    <p id="statAcertos" class="green"></p>
-    <p id="statErros" class="red"></p>
-    <p id="statPendentes" class="yellow"></p>
+  <button class="btn-clear" onclick="clearProgress()">🗑</button>
 
-    <div class="progress-bar">
-      <div id="progress"></div>
-    </div>
+  <h2>Desempenho</h2>
 
-    <button onclick="reviewErrors()">Revisar erros</button>
-    <button onclick="resetAll()">Resetar</button>
+  <p id="statTotal"></p>
+  <p id="statAcertos" class="green"></p>
+  <p id="statErros" class="red"></p>
+  <p id="statPendentes" class="yellow"></p>
+
+  <div class="progress-bar">
+    <div id="progress"></div>
   </div>
 
+  <button onclick="reviewErrors()">Revisar erros</button>
+  <button onclick="resetAll()">Resetar</button>
 </div>
 
 </body>

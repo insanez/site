@@ -92,6 +92,13 @@
     "ex": "Destinação de 5% do lucro do ano conforme exigido por lei."
   },
   {
+    "name": "Encargos Financeiros a Transcorrer",
+    "tipo": "Patrimônio Líquido (Retificadora)",
+    "natureza": "Devedora",
+    "exp": "Financiou os 80% restantes em 60 meses, com juros prefixados.",
+    "ex": "Juros Prefixados"
+  },
+  {
     "name": "Terrenos",
     "tipo": "Ativo",
     "natureza": "Devedora",
