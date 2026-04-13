@@ -8,25 +8,11 @@
     "ex": "Recompra de ações no mercado para futura anulação."
   },
   {
-    "name": "Caixa",
-    "tipo": "Ativo",
-    "natureza": "Devedora",
-    "exp": "Disponibilidade imediata em dinheiro ou depósitos bancários.",
-    "ex": "Dinheiro em espécie guardado no cofre da empresa."
-  },
-  {
     "name": "Capital Social",
     "tipo": "Patrimônio Líquido",
     "natureza": "Credora",
     "exp": "Investimento inicial feito pelos sócios ou acionistas.",
     "ex": "Valor investido pelos donos para abrir o negócio."
-  },
-  {
-    "name": "Clientes",
-    "tipo": "Ativo",
-    "natureza": "Devedora",
-    "exp": "Direitos de recebimento por vendas de mercadorias ou serviços a prazo.",
-    "ex": "Venda realizada com emissão de nota fiscal para pagamento em 30 dias."
   },
   {
     "name": "Contas a Pagar em 3 anos.",
@@ -50,13 +36,6 @@
     "ex": "Redução do valor contábil de um veículo após um ano de uso."
   },
   {
-    "name": "Estoques",
-    "tipo": "Ativo",
-    "natureza": "Devedora",
-    "exp": "Bens destinados à venda ou produção de novos produtos.",
-    "ex": "Mercadorias prontas na prateleira aguardando comprador."
-  },
-  {
     "name": "Fornecedores",
     "tipo": "Passivo",
     "natureza": "Credora",
@@ -69,13 +48,6 @@
     "natureza": "Credora",
     "exp": "Tributos retidos ou apurados que devem ser pagos ao governo.",
     "ex": "Valor do ICMS ou ISS apurado sobre as vendas do mês."
-  },
-  {
-    "name": "Máquinas",
-    "tipo": "Ativo",
-    "natureza": "Devedora",
-    "exp": "Bens tangíveis utilizados na manutenção das atividades da empresa.",
-    "ex": "Torno mecânico utilizado na linha de produção."
   },
   {
     "name": "Provisões Cíveis",
@@ -99,20 +71,6 @@
     "ex": "Juros Prefixados"
   },
   {
-    "name": "Terrenos",
-    "tipo": "Ativo",
-    "natureza": "Devedora",
-    "exp": "Propriedades de terra onde a empresa está instalada ou planeja construir.",
-    "ex": "Lote onde foi construído o galpão logístico da companhia."
-  },
-  {
-    "name": "Caixa e Equivalentes",
-    "tipo": "Ativo",
-    "natureza": "Devedora",
-    "exp": "Recursos com liquidez imediata.",
-    "ex": "Saldo em conta corrente bancária."
-  },
-  {
     "name": "Seguros Antecipados",
     "tipo": "Ativo",
     "natureza": "Devedora",
@@ -127,46 +85,11 @@
     "ex": "Reserva de papel sulfite e cartuchos de impressora."
   },
   {
-    "name": "Terrenos",
-    "tipo": "Ativo",
-    "natureza": "Devedora",
-    "exp": "Propriedades de terra de uso da empresa.",
-    "ex": "Lote onde está construída a sede da companhia."
-  },
-  {
-    "name": "Edifícios",
-    "tipo": "Ativo",
-    "natureza": "Devedora",
-    "exp": "Construções e benfeitorias em propriedades.",
-    "ex": "Prédio administrativo ou galpão de estoque."
-  },
-  {
-    "name": "Equipamentos",
-    "tipo": "Ativo",
-    "natureza": "Devedora",
-    "exp": "Máquinas e aparelhos utilizados na operação.",
-    "ex": "Computadores, impressoras ou maquinário industrial."
-  },
-  {
-    "name": "Fornecedores",
-    "tipo": "Passivo",
-    "natureza": "Credora",
-    "exp": "Obrigações por compras de mercadorias ou insumos a prazo.",
-    "ex": "Dívida com o vendedor de matéria-prima."
-  },
-  {
     "name": "Receita Antecipada",
     "tipo": "Passivo",
     "natureza": "Credora",
     "exp": "Valores recebidos por serviços ainda não prestados.",
     "ex": "Adiantamento de cliente por um projeto que será iniciado no mês seguinte."
-  },
-  {
-    "name": "Empréstimos",
-    "tipo": "Passivo",
-    "natureza": "Credora",
-    "exp": "Captação de recursos junto a instituições financeiras.",
-    "ex": "Empréstimo bancário para capital de giro."
   },
   {
     "name": "Capital Social",
@@ -202,5 +125,173 @@
     "natureza": "Devedora",
     "exp": "Gastos com marketing e publicidade da marca ou produtos.",
     "ex": "Pagamento de anúncio em redes sociais ou rádio."
+  },
+  {
+    "name": "Juros Ativos a Transcorrer",
+    "tipo": "Ativo (Retificadora)",
+    "natureza": "Credora",
+    "exp": "Juros embutidos em direitos que ainda não foram apropriados pelo regime de competência.",
+    "ex": "Juros contidos em uma venda a prazo ainda não transcorrida."
+  },
+  {
+    "name": "Provisão para Perdas Esperadas",
+    "tipo": "Ativo (Retificadora)",
+    "natureza": "Credora",
+    "exp": "Estimativa de perdas com créditos de liquidação duvidosa.",
+    "ex": "Ajuste do valor de duplicatas a receber por risco de inadimplência."
+  },
+  {
+    "name": "Depreciação Acumulada",
+    "tipo": "Ativo (Retificadora)",
+    "natureza": "Credora",
+    "exp": "Desgaste ou perda de valor de bens do imobilizado pelo uso ou tempo.",
+    "ex": "Redução do valor contábil de máquinas e veículos."
+  },
+  {
+    "name": "Duplicatas Descontadas",
+    "tipo": "Passivo",
+    "natureza": "Credora",
+    "exp": "Obrigação com a instituição financeira decorrente da antecipação de títulos.",
+    "ex": "Antecipação de recebíveis em um banco com responsabilidade de pagamento."
+  },
+  {
+    "name": "Juros Passivos a Transcorrer",
+    "tipo": "Passivo (Retificadora)",
+    "natureza": "Devedora",
+    "exp": "Encargos financeiros prefixados em obrigações que ainda vão vencer.",
+    "ex": "Juros de um financiamento bancário ainda não incorridos."
+  },
+  {
+    "name": "Capital Social",
+    "tipo": "Patrimônio Líquido",
+    "natureza": "Credora",
+    "exp": "Investimento inicial e aportes feitos pelos sócios na empresa.",
+    "ex": "Valor total subscrito pelos acionistas na constituição da empresa."
+  },
+  {
+    "name": "Ações em Tesouraria",
+    "tipo": "Patrimônio Líquido (Retificadora)",
+    "natureza": "Devedora",
+    "exp": "Ações da própria empresa que foram recompradas e estão em posse dela.",
+    "ex": "Recompra de ações no mercado para futura anulação ou alienação."
+  },
+  {
+    "name": "Lucros Acumulados",
+    "tipo": "Patrimônio Líquido",
+    "natureza": "Credora",
+    "exp": "Parcela do lucro líquido que permanece na empresa após as destinações para reservas e dividendos.",
+    "ex": "Saldo positivo do exercício que aguarda destinação conforme assembleia de sócios."
+  },
+  {
+    "name": "Cheques a Compensar",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Valores em cheques recebidos de terceiros que ainda não foram depositados ou processados pelo banco.",
+    "ex": "Cheque recebido de um cliente no final do expediente para depósito no dia seguinte."
+  },
+  {
+    "name": "Investimentos em Coligadas",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Participações societárias em outras empresas sobre as quais a entidade exerce influência significativa.",
+    "ex": "Aquisição de 30% das ações de uma empresa parceira para atuação conjunta."
+  },
+  {
+    "name": "Provisão para Devedores Duvidosos",
+    "tipo": "Ativo (Retificadora)",
+    "natureza": "Credora",
+    "exp": "Termo correlato à Provisão para Perdas Esperadas, ajustando o valor dos direitos a receber.",
+    "ex": "Redução do saldo de Clientes para refletir o valor que a empresa efetivamente espera receber."
+  },
+  {
+    "name": "Títulos e Valores Mobiliários",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Aplicações financeiras de liquidez variável, como ações, debêntures ou títulos públicos.",
+    "ex": "Compra de títulos do Tesouro Direto ou ações de outras companhias para investimento."
+  },
+  {
+    "name": "Ajuste de Ativo a Valor Presente",
+    "tipo": "Ativo (Retificadora)",
+    "natureza": "Credora",
+    "exp": "Ajuste que retira os encargos financeiros embutidos em direitos de longo ou curto prazo para trazê-los ao valor atual.",
+    "ex": "Exclusão dos juros futuros de uma venda a prazo para refletir o valor de venda à vista no balanço."
+  },
+  {
+    "name": "Reserva para Contingências",
+    "tipo": "Patrimônio Líquido",
+    "natureza": "Credora",
+    "exp": "Reserva constituída para segregar parte do lucro para compensar prováveis perdas futuras de exercícios seguintes.",
+    "ex": "Destinação de lucro para cobrir possíveis prejuízos decorrentes de uma seca prevista no setor agrícola."
+  },
+  {
+    "name": "Adiantamento de Sócios",
+    "tipo": "Passivo",
+    "natureza": "Credora",
+    "exp": "Recursos recebidos dos sócios que a empresa tem a obrigação de restituir ou converter em capital.",
+    "ex": "Empréstimo feito pelo sócio à empresa para reforço de caixa."
+  },
+  {
+    "name": "Reserva Estatutária",
+    "tipo": "Patrimônio Líquido",
+    "natureza": "Credora",
+    "exp": "Reserva de lucros criada com base em cláusulas específicas do estatuto social da empresa.",
+    "ex": "Destinação de 5% do lucro para expansão, conforme previsto no estatuto."
+  },
+  {
+    "name": "Provisão para Férias",
+    "tipo": "Passivo",
+    "natureza": "Credora",
+    "exp": "Obrigação trabalhista acumulada mensalmente relativa ao direito de férias dos empregados.",
+    "ex": "Reconhecimento mensal do gasto com férias que serão pagas no futuro."
+  },
+  {
+    "name": "Capital a Integralizar",
+    "tipo": "Patrimônio Líquido (Retificadora)",
+    "natureza": "Devedora",
+    "exp": "Parte do capital social que os sócios prometeram, mas ainda não entregaram à empresa.",
+    "ex": "Saldo de capital subscrito que ainda não foi depositado pelos acionistas."
+  },
+  {
+    "name": "Adiantamento a Fornecedores",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Pagamento antecipado feito a um fornecedor por mercadorias ou serviços ainda não recebidos.",
+    "ex": "Pagamento de 50% do valor de uma máquina antes da sua entrega."
+  },
+  {
+    "name": "Adiantamento a Empregados",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Valores antecipados aos funcionários que serão compensados na folha de pagamento futura.",
+    "ex": "Antecipação salarial (vale) concedida no meio do mês."
+  },
+  {
+    "name": "Provisão para Créditos de Liquidação Duvidosa",
+    "tipo": "Ativo (Retificadora)",
+    "natureza": "Credora",
+    "exp": "Ajuste do ativo para cobrir riscos de não recebimento de vendas realizadas a prazo.",
+    "ex": "Percentual sobre o total de duplicatas que a empresa estima não receber."
+  },
+  {
+    "name": "Aplicação Financeira de Liquidez Imediata",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Recursos aplicados em instrumentos financeiros que podem ser resgatados a qualquer momento sem perda significativa de valor.",
+    "ex": "Saldo em CDB de liquidez diária ou cotas de fundos de investimento de curto prazo."
+  },
+  {
+    "name": "Depósitos Bancários",
+    "tipo": "Ativo",
+    "natureza": "Devedora",
+    "exp": "Recursos em dinheiro de propriedade da empresa depositados em contas de livre movimentação em instituições financeiras.",
+    "ex": "Saldo disponível na conta corrente da empresa para pagamento de fornecedores."
+  },
+  {
+    "name": "Custo das Mercadorias Vendidas (CMV)",
+    "tipo": "Resultado (Despesa)",
+    "natureza": "Devedora",
+    "exp": "Representa o custo de aquisição das mercadorias que foram efetivamente vendidas durante o período.",
+    "ex": "Baixa do estoque pelo valor de custo no momento em que a venda é realizada."
   }
 ]
