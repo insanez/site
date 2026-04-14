@@ -102,7 +102,7 @@ function render(){
   document.getElementById("question").innerText = q.name;
   document.getElementById("example").innerText = q.ex;
 
-  const tipos = ["Ativo","Passivo","Patrimônio Líquido","Ativo (Retificadora)","Patrimônio Líquido (Retificadora)","Resultado (Despesa)","Resultado (Receita)"];
+  const tipos = ["Ativo","Passivo","Patrimônio Líquido","Ativo (Retificadora)","Passivo (Retificadora)","Patrimônio Líquido (Retificadora)","Resultado (Despesa)","Resultado (Receita)"];
   document.getElementById("tipos").innerHTML = tipos.map(t =>
     `<button class="${tipo===t?'selected':''}" onclick="selectTipo('${t}')">${t}</button>`
   ).join("");
